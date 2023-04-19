@@ -1,6 +1,9 @@
 #!/bin/bash
 
-DEVICE="/dev/nvme1n1"
+#Ask the user for inputs of device name
+echo "Please specify a device name (e.g. /dev/nvme1n1):"
+read DEVICE
+
 BLOCK_SIZES=("4k" "16k" "128k")
 RW_PATTERNS=("write" "read" "readwrite" "randread" "randwrite")
 IO_DEPTHS=("1" "4" "16" "64" "128" "256")
